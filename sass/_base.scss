@@ -1,0 +1,50 @@
+//COLOR VARIABLES
+$color-green-dark: #61892f;
+$color-green-light: #86c232;
+
+$color-main-black: #222629;
+$color-grey-dark: #474b4f;
+$color-grey-light: #6b6e70;
+
+
+
+//GLOBAL RESET.
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+//Global FONT Size. Working with rems.
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;   
+}
+
+.indexbody {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, ($color-green-light), ($color-green-dark));
+    background-repeat: no-repeat;
+    color: var(--grey-dark-2);
+    min-height: 100vh;
+}
+
+.musicbody {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, ($color-green-light), ($color-green-dark));
+    background-repeat: no-repeat;
+    color: var(--grey-dark-2);
+    min-height: 100vh;
+}
