@@ -1,5 +1,4 @@
 function play(playID) {
-    stop();
     //Determining the whole element.
     //Element gets printed in the terminal.
     var songId = playID;
@@ -11,33 +10,43 @@ function play(playID) {
     //Audio element in variable.
     var play = document.getElementById("audio");
 
+    //Setting the source of audio element before playing it.
     document.getElementById("audio").setAttribute('src', 'audio/'+ songname);
     play.play();
 
-    alert("hallo");
+    //Starting the wave animation with Jquery
 
-
-    let isPaused = play.paused;
-    
-    if(isPaused != true){
-        $(".content__tabledata__wrapper-line1").css("animation", "lineOne 1.8s infinite");
-        $(".content__tabledata__wrapper-line2").css("animation", "lineTwo 2s infinite");
-        $(".content__tabledata__wrapper-line3").css("animation", "lineThree 1.5s infinite");
-        $(".content__tabledata__wrapper-line4").css("animation", "lineFour 1.9s infinite");
-        $(".content__tabledata__wrapper-line5").css("animation", "lineFive 1.4s infinite");
-        $(".content__tabledata__wrapper-line6").css("animation", "lineSix 1.7s infinite");
-        $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s infinite");
-    }
-    else 
-    {
-      alert("Hallo");
-    }
-    
+    $(".content__tabledata__wrapper-line1").css("animation", "lineOne 1.8s infinite");
+    $(".content__tabledata__wrapper-line2").css("animation", "lineTwo 2s infinite");
+    $(".content__tabledata__wrapper-line3").css("animation", "lineThree 1.5s infinite");
+    $(".content__tabledata__wrapper-line4").css("animation", "lineFour 1.9s infinite");
+    $(".content__tabledata__wrapper-line5").css("animation", "lineFive 1.4s infinite");
+    $(".content__tabledata__wrapper-line6").css("animation", "lineSix 1.7s infinite");
+    $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s infinite");   
 }
 
-function pause() 
+function pauzeren() 
 {
-    alert("This is not how it should work ")
-    alert("dit werkt niet");
+    //Stoping the animation with Jquery.
+
+    $(".content__tabledata__wrapper-line1").css("animation", "lineOne 1.8s none");
+    $(".content__tabledata__wrapper-line2").css("animation", "lineTwo 2s none");
+    $(".content__tabledata__wrapper-line3").css("animation", "lineThree 1.5s none");
+    $(".content__tabledata__wrapper-line4").css("animation", "lineFour 1.9s none");
+    $(".content__tabledata__wrapper-line5").css("animation", "lineFive 1.4s none");
+    $(".content__tabledata__wrapper-line6").css("animation", "lineSix 1.7s none");
+    $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s none");
+}
+
+function resume()
+{
+    //resuming the animation after pause.
+    $(".content__tabledata__wrapper-line1").css("animation", "lineOne 1.8s infinite");
+    $(".content__tabledata__wrapper-line2").css("animation", "lineTwo 2s infinite");
+    $(".content__tabledata__wrapper-line3").css("animation", "lineThree 1.5s infinite");
+    $(".content__tabledata__wrapper-line4").css("animation", "lineFour 1.9s infinite");
+    $(".content__tabledata__wrapper-line5").css("animation", "lineFive 1.4s infinite");
+    $(".content__tabledata__wrapper-line6").css("animation", "lineSix 1.7s infinite");
+    $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s infinite");
 }
 

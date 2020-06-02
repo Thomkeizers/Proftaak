@@ -142,7 +142,7 @@
 
 
                     <div class="playbar">
-                        <audio change="pause()" id="audio" class="playbar__control" controls>
+                        <audio onpause="pauzeren()" onplay="resume()" id="audio" class="playbar__control" controls>
                             <source id="playbarmusic" type="audio/mpeg" src="audio/godzilla.mp3">
                         </audio>
                     </div>
