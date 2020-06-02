@@ -1,64 +1,67 @@
 
 function play(playID) {
-    stop();
 //Determining the whole element.
 //Element gets printed in the terminal.
 var songId = playID;
+    //Determining the whole element.
+    //Element gets printed in the terminal.
+    var songId = playID;
     console.log(songId);
  
 //Putting the mp3 source in variable.
 var songname = $(songId).attr("songname");
 // var songNumber = $(songId.attr("nummer"));
 
- 
-    $("#pausebutton").prop('disabled', false);
-    $("#stopbutton").prop('disabled', false);
 
 //Audio element in variable.
 var play = document.getElementById("audio");
- 
-if(play.currentTime != 0)
-    {
-        play.play();
-    }
- 
-else
-    {
-        document.getElementById("audio").setAttribute('src', 'audio/'+ songname);
-        play.play();
-    }
 
-    $("#playheading").text("Playing");
+
+    //Putting the mp3 source in variable.
+    var songname = $(songId).attr("songname");
+    
+    //Audio element in variable.
+    var play = document.getElementById("audio");
+
+    //Setting the source of audio element before playing it.
+    document.getElementById("audio").setAttribute('src', 'audio/'+ songname);
+    play.play();
+
+    //Starting the wave animation with Jquery
+
+    $(".content__tabledata__wrapper-line1").css("animation", "lineOne 1.8s infinite");
+    $(".content__tabledata__wrapper-line2").css("animation", "lineTwo 2s infinite");
+    $(".content__tabledata__wrapper-line3").css("animation", "lineThree 1.5s infinite");
+    $(".content__tabledata__wrapper-line4").css("animation", "lineFour 1.9s infinite");
+    $(".content__tabledata__wrapper-line5").css("animation", "lineFive 1.4s infinite");
+    $(".content__tabledata__wrapper-line6").css("animation", "lineSix 1.7s infinite");
+    $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s infinite");   
+}
+
+function pauzeren() 
+{
+    //Stoping the animation with Jquery.
+
+    $(".content__tabledata__wrapper-line1").css("animation", "lineOne 1.8s none");
+    $(".content__tabledata__wrapper-line2").css("animation", "lineTwo 2s none");
+    $(".content__tabledata__wrapper-line3").css("animation", "lineThree 1.5s none");
+    $(".content__tabledata__wrapper-line4").css("animation", "lineFour 1.9s none");
+    $(".content__tabledata__wrapper-line5").css("animation", "lineFive 1.4s none");
+    $(".content__tabledata__wrapper-line6").css("animation", "lineSix 1.7s none");
+    $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s none");
 }
  
-function pause(status) {
- 
-var kip = status;
-    console.log(kip);
- 
-var pause = document.getElementById("audio");
-var numberId = $(kip).attr("number");
- 
-    console.log(numberId);
- 
 
- 
-if(pause.paused)
-    {
-        pause.play();
-        $("#pausebutton").text("Pause Audio");
-    }
-else {
-        pause.pause();
-        $("#pausebutton").text("Resume");
-    }
-}
- 
-function stop() {
-    $("#playheading").text("Play");
-var stop = document.getElementById("audio");
-    stop.pause();
-    stop.currentTime = 0;
+function resume()
+{
+    //resuming the animation after pause.
+    $(".content__tabledata__wrapper-line1").css("animation", "lineOne 1.8s infinite");
+    $(".content__tabledata__wrapper-line2").css("animation", "lineTwo 2s infinite");
+    $(".content__tabledata__wrapper-line3").css("animation", "lineThree 1.5s infinite");
+    $(".content__tabledata__wrapper-line4").css("animation", "lineFour 1.9s infinite");
+    $(".content__tabledata__wrapper-line5").css("animation", "lineFive 1.4s infinite");
+    $(".content__tabledata__wrapper-line6").css("animation", "lineSix 1.7s infinite");
+    $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s infinite");
 }
 
  
@@ -69,4 +72,5 @@ function myFunction() {
     } else { 
       x.className = x.className.replace(" w3-show", "");
     }
-  }
+}
+
