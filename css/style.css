@@ -74,6 +74,7 @@ html {
 .sidenav {
   background-color: #222629;
   flex: 0 0 20%;
+  position: relative;
   /*height: 80vh;*/
   text-transform: uppercase; }
   .sidenav__navigation {
@@ -460,15 +461,17 @@ background-image: linear-gradient(135deg, #f3ec78, #af4261);
 }
 
 footer{
-  position: relative;
-  margin-top: 30vh;
-  margin-left: 10px;
+  position: absolute;
+  bottom:0;
+  left:10px;
   color: #61892f;
 }
 
   @media only screen and (max-width: 1250px) {
 
     footer{
+      left:0;
+      position: relative;
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -504,6 +507,10 @@ footer{
      }
 
 .indexbody{
+  width: 100%;
+}
+
+.musicbody{
   width: 100%;
 }
 
@@ -604,6 +611,168 @@ font-size: 4vw;
   left: 0;
   }
 }
+
+/* Thoms shit added */
+
+/* playing annimation */
+ 
+   
+ 
+.content__tabledata__wrapper-line1 {
+        width: 0.4rem;
+        background-color: darkgray;
+        height: 1rem;
+        display: inline-block;
+    }
+ 
+    .content__tabledata__wrapper-line2 {
+        width: 0.4rem;
+        background-color: darkgray;
+        height: 1rem; 
+        display: inline-block;
+    }
+ 
+    .content__tabledata__wrapper-line3 {
+        width: 0.4rem;
+        background-color: darkgray;
+        height: 1rem;
+        display: inline-block;
+    }
+ 
+    .content__tabledata__wrapper-line4 {
+        width: 0.4rem;
+        background-color: darkgray;
+        height: 1rem;
+        display: inline-block;
+    }
+ 
+    .content__tabledata__wrapper-line5 {
+        width: 0.4rem;
+        background-color: darkgray;
+        height: 1rem;
+        display: inline-block;
+    }
+ 
+    .content__tabledata__wrapper-line6 {
+        width: 0.4rem;
+        background-color: darkgray;
+        height: 1rem;
+        display: inline-block;
+    }
+ 
+    .content__tabledata__wrapper-line7 {
+        width: 0.4rem;
+        background-color: darkgrey;
+        height: 1rem;
+        display: inline-block;
+ 
+    }
+ 
+    @keyframes lineOne {
+        0% {
+            height: 1rem;
+        }
+ 
+        50% {
+            height: 1.5rem;
+            background-color: rgb(255, 136, 0);
+        }
+ 
+        100% {
+            height: 1rem;
+        }
+    }
+ 
+    @keyframes lineTwo {
+        0% {
+            height: 1rem;
+        }
+ 
+        50% {
+            height: 1.7rem;
+            background-color: rgb(255, 136, 0);;
+        }
+ 
+        100% {
+            height: 1rem;
+        }
+    }
+ 
+    @keyframes lineThree {
+        0% {
+            height: 1rem;
+        }
+ 
+        50% {
+            height: 1.6rem;
+            background-color: rgb(255, 136, 0);;
+        }
+ 
+        100% {
+            height: 1rem;
+        }
+    }
+ 
+    @keyframes lineFour {
+        0% {
+            height: 1rem;
+        }
+ 
+        50% {
+            height: 1.8rem;
+            background-color: rgb(255, 136, 0);;
+        }
+ 
+        100% {
+            height: 1rem;
+        }
+    }
+ 
+    @keyframes lineFive {
+        0% {
+            height: 1rem;
+        }
+ 
+        50% {
+            height: 1.7rem;
+            background-color: rgb(255, 136, 0);;
+        }
+ 
+        100% {
+            height: 1rem;
+        }
+    }
+ 
+    @keyframes lineSix {
+        0% {
+            height: 1rem;
+        }
+ 
+        50% {
+            height: 1.8rem;
+            background-color: rgb(255, 136, 0);;
+        }
+ 
+        100% {
+            height: 1rem;
+        }
+    }
+ 
+    @keyframes lineSeven {
+        0% {
+            height: 1rem;
+        }
+ 
+        50% {
+            height: 1.6rem;
+            background-color: rgb(255, 136, 0);;
+        }
+ 
+        100% {
+            height: 1rem;
+        }
+    }
+ 
 
 
   

@@ -8,13 +8,13 @@ var songId = playID;
     var songId = playID;
     console.log(songId);
  
-//Putting the mp3 source in variable.
-var songname = $(songId).attr("songname");
-// var songNumber = $(songId.attr("nummer"));
+    //Putting the mp3 source in variable.
+    var songname = $(songId).attr("songname");
+    // var songNumber = $(songId.attr("nummer"));
 
 
-//Audio element in variable.
-var play = document.getElementById("audio");
+    //Audio element in variable.
+    var play = document.getElementById("audio");
 
 
     //Putting the mp3 source in variable.
@@ -50,7 +50,6 @@ function pauzeren()
     $(".content__tabledata__wrapper-line6").css("animation", "lineSix 1.7s none");
     $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s none");
 }
- 
 
 function resume()
 {
@@ -64,7 +63,6 @@ function resume()
     $(".content__tabledata__wrapper-line7").css("animation", "lineSeven 1.8s infinite");
 }
 
- 
 function myFunction() {
     var x = document.getElementById("demo");
     if (x.className.indexOf("w3-show") == -1) {

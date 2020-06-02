@@ -78,7 +78,15 @@
                 <div class="content__playlistphoto">
                     <img class="content__artistphoto" src="img/<?php echo $bandinfo['bandImg'];?>" alt="">
                     <h3 class="content__artistheading"><?php echo $bandinfo['bandName']; ?></h3>
-                    <a href="" class="content__artistheadingplay">Play</a>
+                    <a href="" class="content__artistheadingplay"><div class="content__tabledata__wrapper">
+                                    <div class="content__tabledata__wrapper-line1"></div>
+                                    <div class="content__tabledata__wrapper-line2"></div>
+                                    <div class="content__tabledata__wrapper-line3"></div>
+                                    <div class="content__tabledata__wrapper-line4"></div>
+                                    <div class="content__tabledata__wrapper-line5"></div>
+                                    <div class="content__tabledata__wrapper-line6"></div>
+                                    <div class="content__tabledata__wrapper-line7"></div>
+                                </div></a>
                     <?php
                     }
                     ?>
@@ -135,22 +143,14 @@
                                 </div>
                             </td>
                         </tr>
-<?php
+                    <?php
                     }
                     ?>
-
-
-                        
-                        
                     </table>
                 </div>
 
-        
-
-
                     <div class="playbar">
-                        <audio id="audio" class="playbar__control" controls="controls">
-                        <audio onpause="pauzeren()" onplay="resume()" id="audio" class="playbar__control" controls>
+                        <audio id="audio" onpause="pauzeren()"  onplay="resume()" class="playbar__control" controls="controls">
                             <source id="playbarmusic" type="audio/mpeg" src="audio/godzilla.mp3">
                         </audio>
                     </div>
@@ -164,10 +164,11 @@
         </div>
     </div>
 
-<!-- dit jquery link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- dit is link naar ons js file -->
+
+    <!-- dit is link naar ons js file -->
     <script type="text/javascript" src="js/main.js"></script>
+    <!-- dit jquery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
 
