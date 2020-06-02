@@ -10,7 +10,7 @@
 
  $songdata = "SELECT * FROM `songs-info` WHERE `bandID` = $bandParameter ";
 
- $songdataResult = mysqli_query($dbc, $songdata);
+ $songdataResult = mysqli_query($dbc, $songdata) or die (mysqli_error);
 
  //loop through results
  //and add any item to the  array
@@ -41,8 +41,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="musicbody">
 <div class="container">
@@ -52,23 +53,32 @@
             <?php include "includes/sidenav.php" ?>
 
             <div class="content">
+
+            <div class="w3-bar w3-green">
+  <a href="index.php" class="w3-bar-item w3-button">Home</a>
+  <a href="music.php" class="w3-bar-item w3-button w3-hide-small">Music</a>
+  <a href="concert.php" class="w3-bar-item w3-button w3-hide-small">Concert</a>
+  <a href="about.php" class="w3-bar-item w3-button w3-hide-small">About</a>
+  <a href="contact.php" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+  <a href="login.php" class="w3-bar-item w3-button w3-hide-small">Login</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div id="demo" class="w3-bar-block w3-green w3-hide w3-hide-large w3-hide-medium">
+  <a href="music.php" class="w3-bar-item w3-button">Music</a>
+  <a href="concert.php" class="w3-bar-item w3-button">Concert</a>
+  <a href="about.php" class="w3-bar-item w3-button">About</a>
+  <a href="contact.php" class="w3-bar-item w3-button">contact</a>
+  <a href="login.php" class="w3-bar-item w3-button">Login</a>
+</div>
+
             <?php foreach ($bandsinfo as $bandinfo)
                     {
                     ?>
                 <div class="content__playlistphoto">
                     <img class="content__artistphoto" src="img/<?php echo $bandinfo['bandImg'];?>" alt="">
                     <h3 class="content__artistheading"><?php echo $bandinfo['bandName']; ?></h3>
-                    <a id="playheading" class="content__artistheadingplay">
-                                <div class="content__tabledata__wrapper">
-                                    <div class="content__tabledata__wrapper-line1"></div>
-                                    <div class="content__tabledata__wrapper-line2"></div>
-                                    <div class="content__tabledata__wrapper-line3"></div>
-                                    <div class="content__tabledata__wrapper-line4"></div>
-                                    <div class="content__tabledata__wrapper-line5"></div>
-                                    <div class="content__tabledata__wrapper-line6"></div>
-                                    <div class="content__tabledata__wrapper-line7"></div>
-                                </div>
-                    </a>
+                    <a href="" class="content__artistheadingplay">Play</a>
                     <?php
                     }
                     ?>
@@ -89,16 +99,13 @@
                             <td class="content__tabledata"><?php echo $songinfo['songName']; ?></td>
                             <td class="content__tabledata"><?php echo $songinfo['songTime']; ?></td>
                             <td class="content__tabledata"> 
-                            
-                                <!-- <audio id="<?php echo $songinfo['songID']; ?>">
-                                    <source src="./audio/<?php echo $songinfo['songLink']; ?>" type="audio/mpeg">  
-                                </audio> -->
-                                
-                            <button onclick="play(this)" id="sourceId" songname="<?php echo $songinfo['songLink']; ?>" type="button">Play Audio</button></td>
+                                                                    
+                            <button onclick="play(this)" id="<?php echo $songinfo['songID']; ?>" songname="<?php echo $songinfo['songLink']; ?>" type="button">Play</button></td>
 
-                          <!--  <a href="./audio/<?php echo $songinfo['songLink']; ?>">Play</a>
-                            <source src="./audio/<?php echo $songinfo['songLink']; ?>" type="audio/mpeg">  -->
-
+<!--
+                            <td class="content__tabledata"><button onclick="pause()"   id="pausebutton" type="button">Pause Audio</button></td></td>
+                            <td class="content__tabledata"><button onclick="stop()"    id="stopbutton"  type="button">Stop Audio</button></td></td>
+-->                            
                             <td class="content__tabledata">
                                 <div id="half-stars-example">
                                     <div class="rating-group">
@@ -142,12 +149,18 @@
 
 
                     <div class="playbar">
-                        <audio change="pause()" id="audio" class="playbar__control" controls>
+                        <audio id="audio" class="playbar__control" controls="controls">
                             <source id="playbarmusic" type="audio/mpeg" src="audio/godzilla.mp3">
                         </audio>
                     </div>
             </div>
+
         </div> 
+        <div id="footer">
+            <?php
+                include("includes/footermobile.php");
+            ?>
+        </div>
     </div>
 
 <!-- dit jquery link -->

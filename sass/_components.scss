@@ -155,6 +155,7 @@
         width: 30rem;
         height: 30rem;
         position: relative;
+        border-radius: 5%;
         position: relative;
         
 
@@ -193,8 +194,7 @@
     }
 
     &__img {
-        width: 30rem;
-        height: 30rem;
+        width: inherit;
         border-radius: 5%;
     }
 
@@ -221,10 +221,6 @@
         transition: all .4s;
         font-size: 2rem;
     }
-
-
-    
-    
 
     //////////////////////////////////////
     //////  PlaylistPage -> CSS
@@ -340,166 +336,6 @@
             text-decoration: none;
             color: currentColor;
         }
-
-        //////////////////////////////////////
-    //////  Playing animation
-
-   
-
-    &__wrapper-line1 {
-        width: 0.4rem;
-        background-color: $color-grey-dark;
-        height: 1rem;
-        display: inline-block;
-    }
-
-    &__wrapper-line2 {
-        width: 0.4rem;
-        background-color: $color-grey-dark;
-        height: 1rem; 
-        display: inline-block;
-    }
-
-    &__wrapper-line3 {
-        width: 0.4rem;
-        background-color: $color-grey-dark;
-        height: 1rem;
-        display: inline-block;
-    }
-
-    &__wrapper-line4 {
-        width: 0.4rem;
-        background-color: $color-grey-dark;
-        height: 1rem;
-        display: inline-block;
-    }
-
-    &__wrapper-line5 {
-        width: 0.4rem;
-        background-color: $color-grey-dark;
-        height: 1rem;
-        display: inline-block;
-    }
-
-    &__wrapper-line6 {
-        width: 0.4rem;
-        background-color: $color-grey-dark;
-        height: 1rem;
-        display: inline-block;
-    }
-
-    &__wrapper-line7 {
-        width: 0.4rem;
-        background-color: $color-grey-dark;
-        height: 1rem;
-        display: inline-block;
-
-    }
-
-    @keyframes lineOne {
-        0% {
-            height: 1rem;
-        }
-
-        50% {
-            height: 1.5rem;
-            background-color: rgb(255, 136, 0);
-        }
-
-        100% {
-            height: 1rem;
-        }
-    }
-
-    @keyframes lineTwo {
-        0% {
-            height: 1rem;
-        }
-
-        50% {
-            height: 1.7rem;
-            background-color: rgb(255, 136, 0);;
-        }
-
-        100% {
-            height: 1rem;
-        }
-    }
-
-    @keyframes lineThree {
-        0% {
-            height: 1rem;
-        }
-
-        50% {
-            height: 1.6rem;
-            background-color: rgb(255, 136, 0);;
-        }
-
-        100% {
-            height: 1rem;
-        }
-    }
-
-    @keyframes lineFour {
-        0% {
-            height: 1rem;
-        }
-
-        50% {
-            height: 1.8rem;
-            background-color: rgb(255, 136, 0);;
-        }
-
-        100% {
-            height: 1rem;
-        }
-    }
-
-    @keyframes lineFive {
-        0% {
-            height: 1rem;
-        }
-
-        50% {
-            height: 1.7rem;
-            background-color: rgb(255, 136, 0);;
-        }
-
-        100% {
-            height: 1rem;
-        }
-    }
-
-    @keyframes lineSix {
-        0% {
-            height: 1rem;
-        }
-
-        50% {
-            height: 1.8rem;
-            background-color: rgb(255, 136, 0);;
-        }
-
-        100% {
-            height: 1rem;
-        }
-    }
-
-    @keyframes lineSeven {
-        0% {
-            height: 1rem;
-        }
-
-        50% {
-            height: 1.6rem;
-            background-color: rgb(255, 136, 0);;
-        }
-
-        100% {
-            height: 1rem;
-        }
-    }
 
     }
 }
@@ -657,10 +493,6 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-
-  .frontimg {
-      border-radius: 5%;
-  }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
@@ -724,4 +556,3 @@
         }
     }
   }
-
