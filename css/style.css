@@ -11,9 +11,11 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow: hidden; }
 
 .indexbody {
+  overflow: hidden;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
@@ -38,38 +40,38 @@ html {
   width: 80%;
   margin: auto;
 }
-
+ 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
-  .header__logobox {
-    display: flex;
-    align-items: center; }
-  .header__logo {
-    width: 8rem;
-    height: 8rem;
-    margin-left: 2rem;
-    border-radius: 25%; }
-  .header__user {
-    display: flex;
-    align-items: center; }
-  .header__username {
-    margin-right: 2rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: .2rem; }
-  .header__profilepic {
-    width: 8rem;
-    height: 8rem;
-    border-radius: 100px;
-    margin-right: 4rem;
-    border: 2px solid transparent;
-    transition: .3s; }
-    .header__profilepic:hover {
-      border: 2px solid #86c232;
-      transform: scale(1.05); }
+.header__logobox {
+display: flex;
+align-items: center; }
+.header__logo {
+width: 8rem;
+height: 8rem;
+margin-left: 2rem;
+border-radius: 25%; }
+.header__user {
+display: flex;
+align-items: center; }
+.header__username {
+margin-right: 2rem;
+font-size: 1.5rem;
+text-transform: uppercase;
+letter-spacing: .2rem; }
+.header__profilepic {
+width: 8rem;
+height: 8rem;
+border-radius: 100px;
+margin-right: 4rem;
+border: 2pxsolidtransparent;
+transition: .3s; }
+.header__profilepic:hover {
+border: 2pxsolid#86c232;
+transform: scale(1.05); }
 
 .sidenav {
   background-color: #222629;
@@ -115,10 +117,12 @@ html {
     fill: currentColor; }
 
 .content {
+  overflow: scroll;
   background-color: black;
   flex: 0 0 80%;
   position: relative;
-  overflow: hidden; }
+  overflow-x: hidden;
+ }
   .content__video {
     min-height: 140%;
     position: absolute;
@@ -299,7 +303,7 @@ html {
   background-color: transparent;
   position: relative;
   z-index: 1;
-  height: 100%;
+max-height: 150%;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -446,7 +450,7 @@ background-image: linear-gradient(135deg, #f3ec78, #af4261);
   width: 100%;
   max-width: 160rem;
   margin: 4rem auto;
-  height: auto;
+  min-height: 100vh;  
  }
 
 .header {
@@ -460,47 +464,214 @@ background-image: linear-gradient(135deg, #f3ec78, #af4261);
   min-height: 75vh;
 }
 
+
+/* -----------------------------------------------------------------
+ABOUT PAGE
+-------------------------------------------------------------------*/
+
+.about_team_project
+{
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.about_team_project h1
+{
+  text-transform: uppercase;
+  transition: .5s;
+  text-decoration: underline #61892f;
+}
+
+.about_team_project h1:hover
+{
+  color: #61892f;
+}
+
+
+.about_team_project .project_text
+{
+  padding: 10px;
+  /* border: 2px solid rgb(35, 80, 26); */
+  border-radius: 10px;
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 150%;
+  box-shadow: none;
+  transition: .5s;
+  background-color: #000;
+}
+
+.about_team_project .project_text:hover
+{
+  /* border: 2px solid #61892f; */
+  box-shadow: 5px 10px 18px #61892f;
+}
+
+.about_team_members
+{
+  color: #fff;
+  margin-top: 2vh;
+  text-align: center;
+}
+
+.about_team_members h1
+{
+  text-decoration: underline #61892f;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.about_team_members h1:hover
+{
+  color: #61892f;
+}
+
+.members
+{
+  display: flex;
+  justify-content: center;
+}
+
+.member
+{
+  background: #000;
+  padding: 6%;
+  padding-top: 10px;
+  border-radius: 10%;
+}
+
+.member h3
+{
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.members img
+{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.members img:hover
+{
+  border: 2px solid #61892f;
+}
+
+.img__wrap 
+{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.img__description 
+{
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  color: #61892f;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.5rem ;
+  font-weight: 700;
+  transition: .5s;
+}
+
+.img__wrap:hover .img__description 
+{
+  visibility: visible;
+  opacity: 1;
+}
+
+
 footer{
   position: absolute;
   bottom:0;
   left:10px;
   color: #61892f;
+  font-size: 1.5rem;
 }
 
-  @media only screen and (max-width: 1250px) {
+
+  @media only screen and (max-width: 1250px) 
+  {
+    html
+    {
+      overflow: auto;
+    }
+
+    .about_team_project .project_text
+    {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: center;
+    }
+
+    .img__description 
+    {
+        visibility: visible;
+        opacity: 1;
+        bottom: -20px;
+    }
+
+    .members
+    {
+      display: block;
+    }
+
+    .member
+    {
+      border-radius: 0%;
+      width: 100%;
+      margin: 0;
+      background: none;
+    }
 
     footer{
       left:0;
       position: relative;
+      bottom: 0;
       display: flex;
       align-items: flex-end;
       justify-content: center;
       font-weight: bold;
       width: 100%;
-      background-color: none;
       color: #61892f;
-      margin: 0;
       background-color: #363636;
+      font-size: 1.5rem;
     }    
+
     .content{
-    min-height: 95vh;
-    background: linear-gradient(-45deg, #fafafa,#000000, #686868 ,#000000);
-    background-size: 400%400%;
-    animation: gradient 15s ease infinite;
-        }
-     
+      min-height: 95vh;
+      background: linear-gradient(-45deg, #fafafa,#000000, #686868 ,#000000);
+      background-size: 400%400%;
+      animation: gradient 15s ease infinite; 
+        } 
+  
     @keyframes gradient {
-          0% {
-    background-position: 0%50%;
+          0% 
+          {
+            background-position: 0% 50%;
           }
-          50% {
-    background-position: 100%50%;
+          50% 
+          {
+            background-position: 100% 50%;
           }
-          100% {
-    background-position: 0%50%;
+          100% 
+          {
+            background-position: 0% 50%;
           }
-        }
-       
+        }       
 
     .content__video {
       display: none;
@@ -516,6 +687,7 @@ footer{
 
 .container{
   margin: 0;
+  overflow: auto;
 }
 
 
@@ -555,6 +727,7 @@ font-size: 4vw;
 
     .content{
       flex: 0 0 100%;
+      overflow: hidden;
     }
 
     .content__twoalbum .flip-card:not(:first-child){
@@ -592,13 +765,12 @@ font-size: 4vw;
 
 
   @media only screen and (min-width: 1250px) {
-    .w3-bar{
+    .topnav
+    {
       display: none;
     }
 
-    .mobile{
-      display: none;
-    }
+    
   }
     
 
@@ -609,6 +781,14 @@ font-size: 4vw;
   position: absolute;
   top: 0;
   left: 0;
+  }
+}
+
+@media only screen and (max-width:1500px)
+{
+  .members
+  {
+    display: block;
   }
 }
 
@@ -667,7 +847,8 @@ font-size: 4vw;
         display: inline-block;
  
     }
- 
+
+
     @keyframes lineOne {
         0% {
             height: 1rem;
@@ -772,9 +953,8 @@ font-size: 4vw;
             height: 1rem;
         }
     }
- 
-
 
   
+
 
 

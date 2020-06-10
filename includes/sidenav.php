@@ -29,7 +29,7 @@
                         </li>
 
                         <li class="sidenav__item">
-                            <a href="#">
+                            <a href="about.php">
                                 <svg class="sidenav__icon">
                                     <use xlink:href="img/sprite.svg#icon-help"></use>
                                 </svg>
@@ -47,7 +47,7 @@
                         </li>
 
                         <li class="sidenav__item">
-                            <a href="#">
+                            <a href="login.php">
                                 <svg class="sidenav__icon">
                                     <use xlink:href="img/sprite.svg#icon-user"></use>
                                 </svg>
